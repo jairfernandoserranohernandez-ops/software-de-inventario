@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "mysql-connector-j-9.7.0.jar",
+        "jakarta.servlet-api-6.0.0.jar",
+        "c:\\Users\\Jair Hernandez\\.rsp\\redhat-community-server-connector\\runtimes\\installations\\tomcat-11.0.0-M6\\apache-tomcat-11.0.0-M6\\lib\\servlet-api.jar"
+    ]
+}

@@ -1,0 +1,17 @@
+body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; }
+.body-login { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #2c3e50; }
+.login-box { background: white; padding: 40px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+.contenedor { display: flex; }
+nav { width: 220px; background-color: #34495e; padding: 25px; height: 100vh; color: white; }
+nav ul { list-style: none; padding: 0; }
+nav li { margin-bottom: 20px; }
+nav a { color: #ecf0f1; text-decoration: none; font-weight: bold; }
+main { padding: 30px; width: 100%; }
+table { width: 100%; border-collapse: collapse; background: white; margin-bottom: 30px; }
+th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+th { background-color: #3498db; color: white; }
+.caja-form { background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; width: 320px; }
+input { display: block; margin-bottom: 15px; width: 90%; padding: 10px; border: 1px solid #ccc; }
+button { background-color: #27ae60; color: white; border: none; padding: 10px; cursor: pointer; width: 100%; font-weight: bold; }
+button:hover { background-color: #2ecc71; }
