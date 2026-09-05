@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Control de Inventario</h1></header>
+    <div class="contenedor">
+        <nav>
+            <ul>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="#" id="btnCerrar">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Productos en bodega</h2>
+            <table>
+                <thead><tr><th>Producto</th><th>Cantidad</th></tr></thead>
+                <tbody id="tablaInventario"></tbody>
+            </table>
+            <div class="caja-form">
+                <h3>Agregar producto</h3>
+                <form id="formInventario">
+                    <input type="text" id="nombreProducto" placeholder="Nombre" required>
+                    <input type="number" id="cantidadProducto" placeholder="Cantidad" required>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
