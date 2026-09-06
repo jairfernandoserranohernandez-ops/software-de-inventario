@@ -17,29 +17,31 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
+        // Ajuste de los bordes de la pantalla
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Referencias a los elementos del diseño XML
+        // Enlazamos los componentes de la interfaz
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
-        // Acción del botón Ingresar
+        // Acción al presionar el botón de ingresar
         btnLogin.setOnClickListener {
-            val email = etEmail.text.toString().trim()
-            val password = etPassword.text.toString().trim()
+            val emailText = etEmail?.text?.toString()?.trim() ?: ""
+            val passwordText = etPassword?.text?.toString()?.trim() ?: ""
 
-            if (email.isEmpty() || password.isEmpty()) {
+            // Validación básica para evitar campos vacíos
+            if (emailText.isEmpty() || passwordText.isEmpty()) {
                 Toast.makeText(this, "Por favor completa todos los campos", Toast.LENGTH_SHORT).show()
             } else {
-                // Navegar hacia el Módulo de Inventario
+                // Pasamos al módulo de inventario de forma segura
                 val intent = Intent(this, InventarioActivity::class.java)
                 startActivity(intent)
-                finish() // Cierra el login para que al retroceder no regrese aquí
+                finish()
             }
         }
     }
