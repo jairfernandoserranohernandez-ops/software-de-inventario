@@ -11,9 +11,6 @@ import java.sql.*;
 public class AuthServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/plain");
-        PrintWriter out = response.getWriter();
-        
         // Recibo los datos del formulario (deben coincidir con el name en tu HTML)
         String user = request.getParameter("usuario");
         String pass = request.getParameter("password"); 
@@ -34,13 +31,17 @@ public class AuthServlet extends HttpServlet {
             
             // Si el usuario existe, la consulta devuelve una fila
             if (rs.next()) {
-                out.print("Autenticación satisfactoria"); 
+                // Login correcto: redirige a la página principal
+                response.sendRedirect("inventario.html");
             } else {
-                out.print("Error en la autenticación"); 
+                // Login incorrecto: regresa al login con un aviso de error
+                response.sendRedirect("login.html?error=1");
             }
             
             con.close(); 
         } catch (Exception e) {
+            response.setContentType("text/plain");
+            PrintWriter out = response.getWriter();
             out.print("Error interno: " + e.getMessage());
         }
     }

@@ -1,6 +1,0 @@
-modelo\Producto.class
-Principal.class
-dao\ProductoDAO.class
-conexion\Conexion.class
-ProductoServlet.class
-controlador\AuthServlet.class

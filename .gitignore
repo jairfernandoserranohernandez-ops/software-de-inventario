@@ -1,0 +1,18 @@
+# Node / frontend
+node_modules/
+
+# Android
+.gradle/
+build/
+*.iml
+local.properties
+.idea/
+
+# Java / Maven
+target/
+*.class
+*.war
+
+# Sistema
+.DS_Store
+Thumbs.db
